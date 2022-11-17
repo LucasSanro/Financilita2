@@ -2,8 +2,7 @@ package FinancilitaServerlet;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +18,7 @@ import FinancilitaException.DBException;
 
 
 
-@WebServlet("/CadastroDespesa")
+@WebServlet("/despesa.jps")
 public class CadastroDespesa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -39,13 +38,14 @@ public class CadastroDespesa extends HttpServlet {
 			boolean opcao;
 			String nome = request.getParameter("nome");
 			Double valor = Double.parseDouble(request.getParameter("valor"));
+			String reco = request.getParameter("recorrente");
 			
 			
-			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 			Calendar fabricacao = Calendar.getInstance();
 			fabricacao.setTime(format.parse(request.getParameter("data")));
 			
-			String reco = request.getParameter("recorrente");
+			
 			
 			if(reco =="sim") {
 				

@@ -127,7 +127,7 @@
       <button type="button" class="btn btn-outline-success text" onclick="window.location.href='receitas.html'"><i
           class="bi bi-receipt"></i></button>
 
-      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesas.html'"><i
+      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesa.jps'"><i
           class="bi bi-currency-dollar"></i></button>
 
       <button type="button" class="btn btn-outline-primary" onclick="window.location.href='investimentos.html'"><i
