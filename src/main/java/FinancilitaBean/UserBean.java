@@ -1,5 +1,7 @@
 package FinancilitaBean;
 
+import br.com.fiap.store.util.CriptografiaUtils;
+
 public class UserBean {
 
 	private String email;
@@ -11,7 +13,7 @@ public class UserBean {
 	public UserBean(String email, String password) {
 		super();
 		this.email = email;
-		this.password = password;
+		setPassword(password);
 	}
 	public String getEmail() {
 		return email;
@@ -23,10 +25,13 @@ public class UserBean {
 		return password;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		try {
+			this.password = CriptografiaUtils.criptografar(password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
 	
 }
-
