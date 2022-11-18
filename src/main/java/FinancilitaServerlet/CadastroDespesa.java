@@ -39,6 +39,7 @@ public class CadastroDespesa extends HttpServlet {
 			String nome = request.getParameter("nome");
 			Double valor = Double.parseDouble(request.getParameter("valor"));
 			String reco = request.getParameter("recorrente");
+			System.out.println(reco);
 			
 			
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -47,7 +48,7 @@ public class CadastroDespesa extends HttpServlet {
 			
 			
 			
-			if(reco =="sim") {
+			if(reco.toUpperCase() =="SIM") {
 				
 				opcao=true;
 				
@@ -56,6 +57,7 @@ public class CadastroDespesa extends HttpServlet {
 				 opcao=false;
 			}
 			
+			System.out.println(opcao);
 			DespesaBean despesa = new DespesaBean(0,nome,valor,fabricacao,opcao);
 			dao.cadastrar(despesa);
 

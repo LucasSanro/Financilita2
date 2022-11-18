@@ -68,7 +68,7 @@
                         <div class="form-check ml-3">
                             <label class="text-uppercase">É Recorrente?</label>
                             <br>
-                            <input type="radio" class="form-check-input" id="radio1" name="recorrente" value="sim" checked>
+                            <input type="radio" class="form-check-input" id="radio1" name="recorrente" value="SIM" checked>
                             <label class="form-check-label text-uppercase" for="radio1">Sim</label>
                           </div>
                           <p>
