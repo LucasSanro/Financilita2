@@ -24,7 +24,7 @@
 <body>
 
     <header>
-        <a class="logo" href="index.html"></a>
+        <a class="logo" href="dashboard.jsp"></a>
 
         <div>
             <input type="checkbox" name="change-theme" id="change-theme" />
@@ -49,7 +49,7 @@
 			</c:if>
                     
                     
-                    <form class="login-form" method="GET" action="despesa.jps" >
+                    <form class="login-form" method="GET" action="despesa" >
                         <div class="form-group">
                             <label class="text-uppercase">Onde Gastou?</label>
                             <input type="text" class="form-control" name="nome">

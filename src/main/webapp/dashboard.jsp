@@ -39,7 +39,7 @@
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel">
       <div class="logo-div">
-        <a class="logo-menu" href="index.html"></a>
+        <a class="logo-menu" href="#"></a>
       </div>
 
       <div>
@@ -124,10 +124,10 @@
     </div>
 
     <div class="container">
-      <button type="button" class="btn btn-outline-success text" onclick="window.location.href='receitas.html'"><i
+     <button type="button" class="btn btn-outline-success text" onclick="window.location.href='receita.jsp'"><i
           class="bi bi-receipt"></i></button>
 
-      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesa.jps'"><i
+      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesa.jsp'"><i
           class="bi bi-currency-dollar"></i></button>
 
       <button type="button" class="btn btn-outline-primary" onclick="window.location.href='investimentos.html'"><i

@@ -9,35 +9,33 @@ import java.util.Date;
 
 
 import FinancilitaBean.DespesaBean;
-
+import FinancilitaBean.ReceitaBean;
 import FinancilitaDAO.DespesaDao;
+import FinancilitaDAO.ReceitaDAO;
 import FinancilitaException.DBException;
 
 import FinancilitaFactoryDAO.DespesaFactoryDAO;
+import FinancilitaFactoryDAO.ReceitaFactoryDAO;
 
 public class TesteDespesaDAO {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 
-		DespesaDao dao = DespesaFactoryDAO.getDespesaDAO();
+		ReceitaDAO dao = ReceitaFactoryDAO.getReceitaDAO();
 		
-        DateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
-        df.setLenient (false);
-        Date dt = null;
+
         
-         try{dt = df.parse ("31/12/2006");}catch (ParseException ex) {
-             System.out.println ("Data inválida. ");
-             System.exit (1);
-         }
-         
-         Calendar cal = Calendar.getInstance();
-         cal.getTime();
+		
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		Calendar data = Calendar.getInstance();
+		data.setTime(format.parse("2000-12-5"));
+		
 
 		// cadastro teste
 
-		boolean opa = true;
+		System.out.println(data); 
 		
-		DespesaBean conta = new DespesaBean(0,"Aluguel",564065,cal,true);
+		ReceitaBean conta = new ReceitaBean(0,"Aluguel",564065,data,true);
 		try {
 			dao.cadastrar(conta);
 			System.out.println("Conta cadastrada.");

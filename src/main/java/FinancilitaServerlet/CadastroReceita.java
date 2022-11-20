@@ -18,16 +18,16 @@ import FinancilitaException.DBException;
 
 
 
-@WebServlet("/despesa")
-public class CadastroDespesa extends HttpServlet {
+@WebServlet("/receita")
+public class CadastroReceita extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private DespesaDao dao;
+	private ReceitaDAO dao;
 
 	@Override
 	public void init() throws ServletException {
 		super.init();
-		dao = DespesaFactoryDAO.getDespesaDAO();
+		dao = ReceitaFactoryDAO.getReceitaDAO();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -43,33 +43,33 @@ public class CadastroDespesa extends HttpServlet {
 			
 			
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-			Calendar data = Calendar.getInstance();
+			Calendar data= Calendar.getInstance();
 			data.setTime(format.parse(request.getParameter("data")));
 			
 			
 			
-			if(reco.toUpperCase() =="SIM") {
+			 if(reco.toUpperCase() =="SIM") {
 				
 				opcao=true;
 				
 			}else {
 				
 				 opcao=false;
-			}
+			} 
 			
 			System.out.println(data);
-			DespesaBean despesa = new DespesaBean(0,nome,valor,data,opcao);
-			dao.cadastrar(despesa);
+			ReceitaBean receita = new ReceitaBean(0,nome,valor,data,opcao);
+			dao.cadastrar(receita);
 
-			request.setAttribute("msg", "Despesa Cadastrada");
+			request.setAttribute("msg", "Receita Cadastrada");
 		} catch (DBException db) {
 			db.printStackTrace();
-			request.setAttribute("erro", "Erro ao criar Despesa");
+			request.setAttribute("erro", "Erro ao criar Receita");
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("erro", "Por favor, valide os dados");
 		}
-		request.getRequestDispatcher("despesa.jsp").forward(request, response);
+		request.getRequestDispatcher("receita.jsp").forward(request, response);
 	}
 
 }

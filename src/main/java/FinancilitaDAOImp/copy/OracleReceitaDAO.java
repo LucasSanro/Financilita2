@@ -29,9 +29,9 @@ public class OracleReceitaDAO implements ReceitaDAO {
 			// stmt.setInt(1, ReceitaBean.getCd_receita());
 			stmt.setString(1, ReceitaBean.getNm_receita());
 			stmt.setDouble(2, ReceitaBean.getVl_receita());
-			stmt.setBoolean(3, ReceitaBean.isSe_mensal());
+			stmt.setBoolean(4, ReceitaBean.isSe_mensal());
 			java.sql.Date data = new java.sql.Date(ReceitaBean.getDt_receita().getTimeInMillis());
-			stmt.setDate(4, data);
+			stmt.setDate(3, data);
 
 			stmt.executeUpdate();
 
@@ -62,8 +62,8 @@ public class OracleReceitaDAO implements ReceitaDAO {
 			stmt.setDouble(2, ReceitaBean.getVl_receita());
 			stmt.setBoolean(3, ReceitaBean.isSe_mensal());
 			java.sql.Date data = new java.sql.Date(ReceitaBean.getDt_receita().getTimeInMillis());
-			stmt.setDate(4, data);
-			stmt.setInt(5, ReceitaBean.getCd_receita());
+			stmt.setDate(5, data);
+			stmt.setInt(4, ReceitaBean.getCd_receita());
 
 			stmt.executeUpdate();
 
