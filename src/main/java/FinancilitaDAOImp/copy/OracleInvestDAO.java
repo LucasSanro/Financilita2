@@ -125,7 +125,7 @@ public class OracleInvestDAO implements InvestDAO {
 				double rendi = rs.getDouble("REND_INVESTIMENTO");
 				int codigo = rs.getInt("CD_INVESTIMENTO");
 
-				InvestBean = new InvestBean(nome, valor, date, rendi, codigo);
+				InvestBean = new InvestBean(codigo,nome, valor, date, rendi);
 			}
 
 		} catch (SQLException e) {
@@ -163,7 +163,7 @@ public class OracleInvestDAO implements InvestDAO {
 				double rendi = rs.getDouble("REND_INVESTIMENTO");
 				int codigo = rs.getInt("CD_INVESTIMENTO");
 
-				InvestBean InvestBean = new InvestBean(nome, valor, date, rendi, codigo);
+				InvestBean InvestBean = new InvestBean(codigo,nome, valor, date, rendi);
 
 				lista.add(InvestBean);
 			}

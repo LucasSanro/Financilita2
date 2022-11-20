@@ -14,7 +14,7 @@ public class InvestBean {
 
 	}
 
-	public InvestBean(String nm_invest, double vl_invest, Calendar dt_invest, double rend_invest, int cd_invest) {
+	public InvestBean(int cd_invest ,String nm_invest, double vl_invest, Calendar dt_invest, double rend_invest ) {
 		super();
 		this.nm_invest = nm_invest;
 		this.vl_invest = vl_invest;

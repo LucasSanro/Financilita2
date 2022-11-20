@@ -38,6 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 login-sec">
+                
             <c:if test="${not empty msg }">
 			<div class="alert alert-success">${msg}</div>
 			</c:if>
@@ -85,6 +86,7 @@
     </section>
 
 </body>
+
 <script  type="text/javascript"src="assets/jquary,js"></script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
 
