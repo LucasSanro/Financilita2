@@ -59,7 +59,7 @@
 
                         <div class="form-group">
                             <label class="text-uppercase">Data</label>
-                            <input type="date" class="form-control" name="data" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                            <input type="date" class="form-control" name="data" >
                         </div> 
 
                         <div class="form-check ml-3">

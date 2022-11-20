@@ -48,14 +48,15 @@ public class CadastroDespesa extends HttpServlet {
 			
 			
 			
-			if(reco.toUpperCase() =="SIM") {
-				
+			 if(reco.toUpperCase().equals("SIM")) {
+					
 				opcao=true;
 				
 			}else {
 				
 				 opcao=false;
-			}
+				 
+			} 
 			
 			System.out.println(data);
 			DespesaBean despesa = new DespesaBean(0,nome,valor,data,opcao);

@@ -34,12 +34,11 @@ public class CadastroReceita extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
+			boolean opcao = false;
 			
-			boolean opcao;
 			String nome = request.getParameter("nome");
 			Double valor = Double.parseDouble(request.getParameter("valor"));
 			String reco = request.getParameter("recorrente");
-			System.out.println(reco);
 			
 			
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -48,16 +47,21 @@ public class CadastroReceita extends HttpServlet {
 			
 			
 			
-			 if(reco.toUpperCase() =="SIM") {
+			 if(reco.toUpperCase().equals("SIM")) {
 				
 				opcao=true;
 				
 			}else {
 				
 				 opcao=false;
+				 
 			} 
+			 
 			
+			System.out.println(reco);
 			System.out.println(data);
+			System.out.println(opcao);
+			
 			ReceitaBean receita = new ReceitaBean(0,nome,valor,data,opcao);
 			dao.cadastrar(receita);
 
