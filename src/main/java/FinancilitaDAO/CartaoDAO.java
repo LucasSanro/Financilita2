@@ -13,7 +13,7 @@ public interface CartaoDAO {
 
 	void remover(int cd_receita) throws DBException;
 
-	CartaoBean buscar(int id);
+	CartaoBean buscar(int id_cartao);
 
 	List<CartaoBean> listar();
 }

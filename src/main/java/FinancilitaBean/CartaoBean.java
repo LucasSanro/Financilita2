@@ -3,7 +3,7 @@ package FinancilitaBean;
 public class CartaoBean {
 
 	private int cd_cartao;
-	private int user_cpf;
+	private int id_cartao;
 	private int num_last4;
 	private String nm_cartao;
 
@@ -11,10 +11,10 @@ public class CartaoBean {
 
 	}
 
-	public CartaoBean(int cd_cartao, int user_cpf, int num_last4, String nm_cartao) {
+	public CartaoBean(int cd_cartao, int id_cartao, int num_last4, String nm_cartao) {
 		super();
 		this.cd_cartao = cd_cartao;
-		this.user_cpf = user_cpf;
+		this.id_cartao = id_cartao;
 		this.num_last4 = num_last4;
 		this.nm_cartao = nm_cartao;
 	}
@@ -27,12 +27,12 @@ public class CartaoBean {
 		this.cd_cartao = cd_cartao;
 	}
 
-	public int getUser_cpf() {
-		return user_cpf;
+	public int getId_cartao() {
+		return id_cartao;
 	}
 
-	public void setUser_cpf(int user_cpf) {
-		this.user_cpf = user_cpf;
+	public void setId_cartao(int id_cartao) {
+		this.id_cartao = id_cartao;
 	}
 
 	public int getNun_last4() {

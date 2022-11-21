@@ -4,11 +4,11 @@ import java.util.Calendar;
 
 public class ReceitaBean {
 
+	private String nm_receita;
 	private int cd_receita;
 	private double vl_receita;
 	private Calendar dt_receita;
 	private boolean se_mensal;
-	private String nm_receita;
 
 	public ReceitaBean() {
 

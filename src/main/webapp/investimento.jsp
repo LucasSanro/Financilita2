@@ -13,10 +13,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="assets/css/register.css" />
     <script src="assets/js/scripts.js" defer></script>
 </head>
@@ -24,7 +21,7 @@
 <body>
 
     <header>
-        <a class="logo" href="dashboard.jsp"></a>
+        <a class="logo" href="index.html"></a>
 
         <div>
             <input type="checkbox" name="change-theme" id="change-theme" />
@@ -39,48 +36,41 @@
             <div class="row">
                 <div class="col-md-12 login-sec">
                 
-            <c:if test="${not empty msg }">
+             <c:if test="${not empty msg }">
 			<div class="alert alert-success">${msg}</div>
 			</c:if>
 			<c:if test="${not empty erro }">
 			<div class="alert alert-danger">${erro}</div>
 			</c:if>
-                    <h2 class="text-center">Nova Receita</h2>
+                    <h2 class="text-center">Novo Investimento</h2>
                     
-                    <form class="login-form" method="GET" action="receita">
+			
+                    <form class="login-form" method="GET" action="Investimento">
                         <div class="form-group">
-                            <label class="text-uppercase">De onde Recebeu?</label>
+                            <label class="text-uppercase">Onde Investiu?</label>
                             <input type="text" class="form-control" name="nome">
                         </div>
-                       
-                        <div class="form-group">
+
+                        <div class="form-group" >
                             <label class="text-uppercase">Valor</label>
                             <input type="number" step="0.01" class="form-control" name="valor">
+                        </div>
+                                                <div class="form-group">
+                            <label class="text-uppercase">Rendimento A.A (%)</label>
+                            <input type="number" step="0.01" class="form-control" name="rendi">
                         </div>
 
                         <div class="form-group">
                             <label class="text-uppercase">Data</label>
-                            <input type="date" class="form-control" name="data" >
-                        </div> 
-
-                        <div class="form-check ml-3">
-                            <label class="text-uppercase">É Recorrente?</label>
-                            <br>
-                            <input type="radio" class="form-check-input" id="radio1" name="recorrente" value="sim" checked>
-                            <label class="form-check-label text-uppercase" for="radio1">Sim</label>
-                          </div>
-                          <p>
-                          <div class="form-check ml-3">
-                            <input type="radio" class="form-check-input" id="radio2" name="recorrente" value="nao" >
-                            <label class="form-check-label text-uppercase" for="radio2">Não</label>
-                          </div>
-                        <div class="form-check">
-                            <input type="submit" class="btn btn-login " value="Cadastrar">
+                            <input type="date" class="form-control" name="data">
                         </div>
-                        
+
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-login ">Cadastrar</button>
+                        </div>
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </section>

@@ -39,7 +39,7 @@
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel">
       <div class="logo-div">
-        <a class="logo-menu" href="index.html"></a>
+        <a class="logo-menu" href="index.jsp"></a>
       </div>
 
       <div>
@@ -66,7 +66,7 @@
         </button>
       </div>
     </div>
-    <a class="logo" href="index.html"></a>
+    <a class="logo" href="index.jsp"></a>
 
     <div>
       <input type="checkbox" name="change-theme" id="change-theme" />
@@ -124,13 +124,13 @@
     </div>
 
     <div class="container">
-      <button type="button" class="btn btn-outline-success text" onclick="window.location.href='receitas.html'"><i
+     <button type="button" class="btn btn-outline-success text" onclick="window.location.href='receita.jsp'"><i
           class="bi bi-receipt"></i></button>
 
-      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesas.html'"><i
+      <button type="button" class="btn btn-outline-danger" onclick="window.location.href='despesa.jsp'"><i
           class="bi bi-currency-dollar"></i></button>
 
-      <button type="button" class="btn btn-outline-primary" onclick="window.location.href='investimentos.html'"><i
+      <button type="button" class="btn btn-outline-primary" onclick="window.location.href='investimento.jsp'"><i
           class="bi bi-graph-up-arrow"></i></button>
     </div>
 
@@ -149,17 +149,20 @@
       </div>
       <div class="card-body" id="myTabContent">
         <table class="table table-striped">
-            <tr>
-              <th>Nome</th>
-              <th>Valor</th>
-              <th>Data</th>
-            </tr>
-
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+           <tr>
+				<th>Nome</th>
+				<th>valor</th>
+				<th>Data </th>
+				
+				<c:forEach items="${DespesaBean}" var="d">
+				<tr>
+					<td>${d.nm_despesa}</td>
+					<td>${d.vl_despesa}</td>
+					<td>
+						<fmt:formatDate value="${d.dt_despesa.time }" pattern="dd/MM/yyyy"/>
+					</td>
+				</tr>
+					</c:forEach>
         </table>
       </div>
     </div>

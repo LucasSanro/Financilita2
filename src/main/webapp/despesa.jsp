@@ -24,7 +24,7 @@
 <body>
 
     <header>
-        <a class="logo" href="index.html"></a>
+        <a class="logo" href="dashboard.jsp"></a>
 
         <div>
             <input type="checkbox" name="change-theme" id="change-theme" />
@@ -38,9 +38,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 login-sec">
+   
+                     
                     <h2 class="text-center">Nova Despesa</h2>
+            <c:if test="${not empty msg }">
+			<div class="alert alert-success">${msg}</div>
+			</c:if>
+			<c:if test="${not empty erro }">
+			<div class="alert alert-danger">${erro}</div>
+			</c:if>
                     
-                    <form class="login-form" method="GET" action="CadastroDespesa" >
+                    
+                    <form class="login-form" method="GET" action="despesa" >
                         <div class="form-group">
                             <label class="text-uppercase">Onde Gastou?</label>
                             <input type="text" class="form-control" name="nome">
@@ -53,13 +62,13 @@
 
                         <div class="form-group">
                             <label class="text-uppercase">Data</label>
-                            <input type="date" class="form-control" name="data">
+                            <input type="date" class="form-control" name="data" >
                         </div> 
 
                         <div class="form-check ml-3">
                             <label class="text-uppercase">É Recorrente?</label>
                             <br>
-                            <input type="radio" class="form-check-input" id="radio1" name="recorrente" value="sim" checked>
+                            <input type="radio" class="form-check-input" id="radio1" name="recorrente" value="SIM" checked>
                             <label class="form-check-label text-uppercase" for="radio1">Sim</label>
                           </div>
                           <p>
@@ -78,5 +87,6 @@
     </section>
 
 </body>
-
-<
+<script  type="text/javascript"src="assets/jquary,js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</html>
