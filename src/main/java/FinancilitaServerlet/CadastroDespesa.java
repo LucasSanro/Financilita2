@@ -32,6 +32,10 @@ public class CadastroDespesa extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+			
+		List<DespesaBean> lista = dao.listar();
+		request.setAttribute("despesa", lista);
+		request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 
 		try {
 			
@@ -48,15 +52,14 @@ public class CadastroDespesa extends HttpServlet {
 			
 			
 			
-			 if(reco.toUpperCase().equals("SIM")) {
-					
+			if(reco.toUpperCase().equals("SIM")) {
+				
 				opcao=true;
 				
 			}else {
 				
 				 opcao=false;
-				 
-			} 
+			}
 			
 			System.out.println(data);
 			DespesaBean despesa = new DespesaBean(0,nome,valor,data,opcao);
@@ -73,8 +76,6 @@ public class CadastroDespesa extends HttpServlet {
 		request.getRequestDispatcher("despesa.jsp").forward(request, response);
 	}
 	
-
-
 }
 
 
